@@ -11,7 +11,7 @@ public:
         :omega_mark(omega_mark),omega_space(omega_space),get_digital_samples(get_digital_samples) {};
     void demodulate(const float *in_analog_samples, unsigned int n);
 private:
-    float omega_mark, omega_space;
+    float omega_mark, omega_space, d0 = 0, d1 = 0, f0 = 0, f1 = 0 ,  vr0 = 0, vi0 = 0, vr1 = 0, vi1 = 0;
     std::function<void(const unsigned int *, unsigned int)> get_digital_samples;
 };
 
